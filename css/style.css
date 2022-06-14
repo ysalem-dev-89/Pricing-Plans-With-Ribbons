@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e9f5fd;
+}
+
+.pricing-plans {
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pricing-plans .pricing-plan {
+    width: calc(33.33% - 20px);
+    max-width: 350px;
+    min-width: 200px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .pricing-plans .pricing-plan.basic {
+        margin-top: 10px;
+    }
+    .pricing-plans .pricing-plan.standard {
+        margin-top: 40px;
+    }
+    .pricing-plans .pricing-plan.premium {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width:991px) {
+    .pricing-plans .pricing-plan {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.pricing-plans .pricing-plan .price {
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.pricing-plans .pricing-plan .plan-title {
+    color: white;
+    border-radius: 0 15px 15px 0;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    left: -10px;
+    margin-bottom: 25px;
+}
+
+.pricing-plans .pricing-plan.basic .plan-title {
+    background-color: #13c8a6;
+}
+
+.pricing-plans .pricing-plan.standard .plan-title {
+    background-color: #efcb53;
+}
+
+.pricing-plans .pricing-plan.premium .plan-title {
+    background-color: #555fae;
+}
+
+.pricing-plans .pricing-plan .plan-title:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+}
+
+.pricing-plans .pricing-plan.basic .plan-title:before {
+    border-color: transparent #0faa8e transparent transparent;
+}
+
+.pricing-plans .pricing-plan.standard .plan-title:before {
+    border-color: transparent #c5a744 transparent transparent;
+}
+
+.pricing-plans .pricing-plan.premium .plan-title:before {
+    border-color: transparent #464e8d transparent transparent;
+}
+
+.pricing-plans .pricing-plan .features {
+    list-style: none;
+    padding: 0;
+    margin: 120px 0 0 0;
+}
+
+.pricing-plans .pricing-plan .features li:first-child {
+    margin-bottom: 26px;
+}
+
+.pricing-plans .pricing-plan .features li {
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.pricing-plans .pricing-plan .signup {
+    color: white;
+    width: 140px;
+    height: 40px;
+    background-color: tomato;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.pricing-plans .pricing-plan.basic .signup {
+    background-color: #13c8a6;
+}
+
+.pricing-plans .pricing-plan.basic .signup:hover {
+    background-color: #10a187;
+}
+
+.pricing-plans .pricing-plan.standard .signup {
+    background-color: #efcb53;
+}
+
+.pricing-plans .pricing-plan.standard .signup:hover {
+    background-color: #caac47;
+}
+
+.pricing-plans .pricing-plan.premium .signup {
+    background-color: #555fae;
+}
+
+.pricing-plans .pricing-plan.premium .signup:hover {
+    background-color: #434b88;
+}
